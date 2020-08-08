@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller">
+   <center>
+      <VBox fillWidth="false" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="621.0">
+               <children>
+                  <TextField fx:id="corpusPath" prefHeight="6.0" prefWidth="330.0" promptText="please choose your corpus and stop words path" />
+                  <Button fx:id="corpusButton" mnemonicParsing="false" onAction="#selectDir" prefHeight="25.0" prefWidth="110.0" text="Corpus path" />
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="postingPath" prefHeight="13.0" prefWidth="330.0" promptText="please choose your posting path" />
+                  <Button fx:id="postingButton" mnemonicParsing="false" onAction="#selectPostingDir" prefHeight="25.0" prefWidth="110.0" text="Posting Path" />
+               </children>
+            </HBox>
+            <Pane>
+               <children>
+                  <Button fx:id="indexButton" alignment="CENTER" contentDisplay="CENTER" layoutY="29.0" mnemonicParsing="false" onAction="#createIndex" prefHeight="30.0" prefWidth="160.0" text="Create Index" textOverrun="WORD_ELLIPSIS" />
+                  <Button fx:id="displayDicButton" disable="true" layoutX="-2.0" layoutY="71.0" mnemonicParsing="false" onAction="#displayDic" prefHeight="30.0" prefWidth="160.0" text="Display Dictionary" />
+                  <Button fx:id="loadDicButton" layoutX="209.0" layoutY="29.0" mnemonicParsing="false" onAction="#loadDictionary" prefHeight="30.0" prefWidth="160.0" text="Load Dictionary" />
+                  <Button fx:id="resetButton" disable="true" layoutX="209.0" layoutY="71.0" mnemonicParsing="false" onAction="#resetProgram" prefHeight="30.0" prefWidth="160.0" text="Reset" textOverrun="WORD_ELLIPSIS" />
+                  <CheckBox fx:id="stem" contentDisplay="CENTER" layoutX="-3.0" layoutY="-11.0" mnemonicParsing="false" onAction="#checkBoxStem" prefHeight="41.0" prefWidth="127.0" text="Stemming" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label BorderPane.alignment="CENTER">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" snapToPixel="false" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="747.0">
+               <children>
+                  <TextField fx:id="singleQuery" alignment="TOP_CENTER" prefHeight="26.0" prefWidth="330.0" promptText="please enter your query here" />
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="621.0">
+               <children>
+                  <TextField fx:id="queryFilePath" prefHeight="25.0" prefWidth="330.0" promptText="please choose file with querys" />
+                  <Button fx:id="queryFilePathButton" mnemonicParsing="false" onAction="#runFileOfQuery" prefHeight="23.0" prefWidth="115.0" text="Browse" />
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="747.0">
+               <children>
+                  <CheckBox fx:id="entity" mnemonicParsing="false" onAction="#checkBoxs" prefHeight="28.0" prefWidth="123.0" text="Entity Search" />
+                  <CheckBox fx:id="treat" mnemonicParsing="false" onAction="#checkBoxs" prefHeight="31.0" prefWidth="133.0" text="Semantic Treat" />
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="797.0">
+               <children>
+                  <Button fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" onAction="#createSearcher" prefHeight="42.0" prefWidth="88.0" text="Search" />
+                  <Button fx:id="displayResult" mnemonicParsing="false" onAction="#displayQueryResult" prefHeight="42.0" prefWidth="95.0" text="Display Results">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="747.0">
+               <children>
+                  <TextField fx:id="savePath" prefHeight="24.0" prefWidth="330.0" promptText="please choose a path to save the result" />
+                  <Button fx:id="chooseSavePathButton" mnemonicParsing="false" onAction="#selectSavingDir" prefHeight="19.0" prefWidth="102.0" text="Browse" />
+               </children></HBox>
+            <HBox prefHeight="41.0" prefWidth="747.0">
+               <children>
+                  <Button fx:id="savePathButton" mnemonicParsing="false" onAction="#save" prefHeight="41.0" prefWidth="112.0" text="Save" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </VBox>
+   </bottom>
+   <padding>
+      <Insets left="20.0" />
+   </padding>
+</BorderPane>

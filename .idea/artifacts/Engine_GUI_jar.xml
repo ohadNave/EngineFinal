@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Engine-GUI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Engine_GUI_jar</output-path>
+    <root id="archive" name="Engine-GUI.jar">
+      <element id="module-output" name="Engine-GUI" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/porter-stemmer-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/jsoup-1.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/medallia-word2vec-0.10.2-jar-with-dependencies.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
